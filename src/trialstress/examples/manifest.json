@@ -1,0 +1,55 @@
+{
+  "name": "trialstress authored scenarios",
+  "schema_version": "1.0.0",
+  "generated": "2026-11-23",
+  "terms": "These files were written in this repository. They contain hypothetical design assumptions only. They are not measurements from people and they are not a downloaded study dataset. Outcomes are synthesized at runtime from the scenario seed. Use is under the MIT license of this project.",
+  "remote_sources": [],
+  "runtime_seed_note": "Each scenario carries its own simulation.seed. The demo seed is 20261123. Replication r is drawn from numpy SeedSequence([seed, r]) with PCG64.",
+  "files": [
+    {
+      "path": "acceptance-null.json",
+      "role": "Null mean difference, 4000 replications",
+      "sha256": "1757edba783b93fa8146786c723ef09faa8b8762f2f7027da1423c6711a69808"
+    },
+    {
+      "path": "acceptance-power.json",
+      "role": "Full-data power check, 4000 replications",
+      "sha256": "4f2e868fce636da9da76ec208eb0ecaa3c60c0f2a97509f9b61fef9785d29f16"
+    },
+    {
+      "path": "baseline.json",
+      "role": "Demo baseline, accrual 10 per week",
+      "sha256": "2bca57def08708d4d68fc42f133226f59a4b61cf1e9e4573bd56f8852fdb1eb6"
+    },
+    {
+      "path": "invalid-alpha.json",
+      "role": "Rejected input, alpha 1.5",
+      "sha256": "9e861970b685a7b8e8b7d3c46b5ee96e28a09317c7e80a6c4a8bea180c6e149d"
+    },
+    {
+      "path": "invalid-probability.json",
+      "role": "Rejected input, dropout probability 1.5",
+      "sha256": "6fdf34d0e0fa34b5da5be194576f6db2638c4ccfafd510d5bc8d9a6cdacb1339"
+    },
+    {
+      "path": "nonfinite.json",
+      "role": "Rejected input, nonfinite mean difference",
+      "sha256": "ae4ac66913288811b63c023cad58ad74e5e868e3bd220ec3d60cface44de22ff"
+    },
+    {
+      "path": "over-budget.json",
+      "role": "Rejected input, 20001 replications",
+      "sha256": "3e398ce05d9cd8fb601041bc634fbccabd227090401baffcf9d8fe0ddd58f130"
+    },
+    {
+      "path": "slow-accrual.json",
+      "role": "Demo comparison, accrual 4 per week",
+      "sha256": "b42ff107743191807e6a232fa8f8c81e66eff918cd39f0fe79a122118bfa84aa"
+    },
+    {
+      "path": "total-dropout.json",
+      "role": "Dropout probability 1 in both arms",
+      "sha256": "5ff079b67e53708140968401ae2b7d974bb27665812391dd589eee4ea70294d3"
+    }
+  ]
+}

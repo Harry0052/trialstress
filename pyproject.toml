@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trialstress"
+version = "0.1.0"
+description = "Stress hypothetical two-arm continuous trial designs under accrual, dropout, and effect-size assumptions."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+  "numpy==2.2.6",
+  "scipy==1.15.3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "build==1.2.2",
+  "pytest==8.3.5",
+  "ruff==0.11.12",
+]
+
+[project.scripts]
+trialstress = "trialstress.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Harry0052/trialstress"
+Source = "https://github.com/Harry0052/trialstress"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+trialstress = ["py.typed", "examples/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/trialstress/report.py" = ["E501"]
