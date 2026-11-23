@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "id": "acceptance-power",
+  "label": "Full-data power check, no dropout",
+  "endpoint": {
+    "name": "hypothetical_mobility_score",
+    "unit": "score_points",
+    "distribution": "gaussian",
+    "time_to_outcome_weeks": 4
+  },
+  "design": {
+    "allocation": "1:1",
+    "planned_n": 100,
+    "accrual_per_week": 10,
+    "readout_week": 20,
+    "alpha": 0.05,
+    "sided": "two",
+    "min_analyzable_per_arm": 2
+  },
+  "assumptions": {
+    "mean_control": 0.0,
+    "mean_difference": 0.6,
+    "common_sd": 1.0,
+    "dropout_probability_control": 0.0,
+    "dropout_probability_treatment": 0.0
+  },
+  "simulation": {
+    "replications": 4000,
+    "seed": 20261123
+  }
+}
