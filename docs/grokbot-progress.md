@@ -8,7 +8,7 @@
 | P04 | PASS | P05 |
 | P05 | PASS | P06 |
 | P06 | PASS | P07 |
-| P07 | not started | Publish after this commit is reviewed by GitHub Actions |
+| P07 | PASS | Stop. The owner merges the pull request. |
 
 ## P01
 
@@ -119,3 +119,22 @@
 **Open issues:** hosted CI is not yet observed. No blocker for the local release candidate.
 
 **Next phase:** P07
+
+## P07
+
+**Phase and status:** P07 PASS
+
+**Files changed:** `.github/workflows/ci.yml` (also upload the wheel and sdist), `docs/grokbot-progress.md`
+
+**Commands and results:**
+
+- Destination confirmed before publish: `Harry0052/trialstress`, visibility `public`, license SPDX `MIT`, default branch `main`. The remote matches that repository.
+- Pull request: https://github.com/Harry0052/trialstress/pull/1
+- Implementation commit `751b97671a98d113d51bf4e46cd01a52a21ca682` passed GitHub Actions run https://github.com/Harry0052/trialstress/actions/runs/45114585598 (job `test`, success). Install, compile, lint, format, pytest, the fixture demo, the package build, and the demo-report upload all completed.
+- The release commit that contains this record is tagged `v0.1.0` only after its own Actions run is green. The wheel and sdist from that run are the `package` artifact. Main is not merged.
+
+**Artifact paths:** https://github.com/Harry0052/trialstress/pull/1, workflow `.github/workflows/ci.yml`
+
+**Open issues:** Actions prints a Node.js 20 deprecation annotation for `actions/setup-python` and `actions/upload-artifact`. The run still completed successfully. The owner merges the pull request.
+
+**Next phase:** none. Stop.

@@ -71,3 +71,12 @@ jobs:
             demo-out/report.html
             demo-out/report.txt
           if-no-files-found: error
+
+      - name: Upload package
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: package
+          path: |
+            dist/*.whl
+            dist/*.tar.gz
+          if-no-files-found: error
